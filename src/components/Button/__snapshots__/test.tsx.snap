@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render a correctly struct button and styles 1`] = `
+.c0 {
+  height: 4rem;
+  background-color: #E1A607;
+  color: #FFFFFF;
+  padding: 0.8rem 2.4rem;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.c0:hover {
+  background-color: #c89406;
+}
+
+<button
+  class="c0"
+  color="yellow"
+>
+  <span>
+    Seja um franqueado
+  </span>
+</button>
+`;
