@@ -46,7 +46,11 @@ const Header = () => {
       </Button>
 
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
-        <CloseIcon aria-label="Close menu" onClick={() => setIsOpen(false)} />
+        <CloseIcon
+          aria-label="Close menu"
+          onClick={() => setIsOpen(false)}
+          size={24}
+        />
         <S.MenuNav>
           <Link href="#" passHref>
             <S.MenuLink href="#">Seja um franqueado</S.MenuLink>
