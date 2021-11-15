@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { renderWithTheme } from "../../utils/helpers";
 import Dropdown from ".";
 
-describe("<Button />", () => {
+describe("<Dropdown />", () => {
   it("should render title and children", () => {
     const { container } = renderWithTheme(
       <Dropdown title="my title">my children</Dropdown>

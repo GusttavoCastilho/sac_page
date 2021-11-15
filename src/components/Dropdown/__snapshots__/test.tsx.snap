@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> should render title and children 1`] = `
+exports[`<Dropdown /> should render title and children 1`] = `
 .c3 {
   display: inline-block;
   vertical-align: middle;
