@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { lighten } from "polished";
+import media from "styled-media-query";
 
 type WrapperProps = {
   isOpen?: boolean;
@@ -11,6 +12,10 @@ const WrapperModifers = {
     height: 100px;
     pointer-events: auto;
     transform: translateY(0);
+
+    ${media.lessThan("small")`
+      height: 60px;
+    `}
   `,
   close: () => css`
     opacity: 0;
@@ -20,7 +25,7 @@ const WrapperModifers = {
 };
 
 export const Wrapper = styled.div<WrapperProps>`
-  ${({ isOpen }) => css`
+  ${({ isOpen, theme }) => css`
     position: relative;
     width: 80%;
 
@@ -29,6 +34,12 @@ export const Wrapper = styled.div<WrapperProps>`
       ${isOpen && WrapperModifers.open()}
       ${!isOpen && WrapperModifers.close()}
     }
+
+    ${media.lessThan("large")`
+     width: 100%;
+     padding: 0 ${theme.spacings.xxsmall};
+     height: ${isOpen ? "100px" : "50px"};
+    `}
   `}
 `;
 
@@ -44,6 +55,16 @@ export const Title = styled.h5`
     cursor: pointer;
     position: relative;
     padding-right: 2.4rem;
+
+    ${media.lessThan("large")`
+      font-size: ${theme.font.sizes.medium};
+      padding-right: 10px;
+    `}
+
+    ${media.lessThan("medium")`
+      font-size: ${theme.font.sizes.small};
+      padding-right: 10px;
+    `}
   `}
 `;
 
@@ -57,6 +78,18 @@ export const Content = styled.p`
     color: ${theme.colors.dark};
 
     line-height: ${theme.spacings.small};
+
+    ${media.lessThan("large")`
+      font-size: ${theme.font.sizes.small};
+      margin-top: ${theme.spacings.xxsmall};
+      line-height: ${theme.spacings.xsmall};
+    `}
+
+    ${media.lessThan("medium")`
+      font-size: ${theme.font.sizes.xsmall};
+      margin-top: ${theme.spacings.xxsmall};
+      line-height: ${theme.spacings.xsmall};
+    `}
   `}
 `;
 
