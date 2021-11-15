@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render title and children 1`] = `
+.c3 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c0 {
+  position: relative;
+  width: 80%;
+}
+
+.c0 .c4 {
+  -webkit-transition: -webkit-transform 0.2s ease-in,opacity 0.3s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in,opacity 0.3s ease-in-out;
+  transition: transform 0.2s ease-in,opacity 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(-2rem);
+  -ms-transform: translateY(-2rem);
+  transform: translateY(-2rem);
+}
+
+.c2 {
+  font-size: 2.0rem;
+  font-weight: 600;
+  color: #A141EB;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-right: 2.4rem;
+}
+
+.c5 {
+  width: 100%;
+  margin-top: 2.4rem;
+  font-size: 1.6rem;
+  color: #5B5B5B;
+  line-height: 2.4rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #c1c1c1;
+  height: 1px;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <h5
+      class="c2"
+    >
+      my title
+    </h5>
+    <div />
+    <svg
+      aria-hidden="true"
+      aria-label="arrow-down"
+      class="c3"
+      color="#A141EB"
+      fill="currentColor"
+      focusable="false"
+      height="28"
+      style="cursor: pointer;"
+      viewBox="0 0 24 24"
+      width="28"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        data-name="Layer 2"
+      >
+        <path
+          d="M12 16a1 1 0 01-.64-.23l-6-5a1 1 0 111.28-1.54L12 13.71l5.36-4.32a1 1 0 011.41.15 1 1 0 01-.14 1.46l-6 4.83A1 1 0 0112 16z"
+          data-name="arrow-ios-downward"
+        />
+      </g>
+    </svg>
+  </div>
+  <p
+    aria-hidden="true"
+    class="c4 c5"
+  >
+    my children
+  </p>
+</div>
+`;
