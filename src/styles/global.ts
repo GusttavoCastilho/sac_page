@@ -29,6 +29,15 @@ const GlobalStyles = createGlobalStyle`
         url('/fonts/Montserrat-Bold.ttf') format('ttf'),
   }
 
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/Montserrat-ExtraBold.ttf') format('ttf'),
+  }
+
   * {
     margin: 0;
     padding: 0;
