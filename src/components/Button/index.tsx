@@ -3,6 +3,7 @@ import * as S from "./styles";
 
 export type ButtonProps = {
   children: React.ReactNode;
+  size?: "medium" | "small";
   color?: "yellow" | "purple_dark" | "blue";
   icon?: string;
   iconSize?: number;
@@ -11,6 +12,7 @@ export type ButtonProps = {
 
 const Button = ({
   children,
+  size = "medium",
   color = "yellow",
   icon,
   iconSize,
@@ -18,6 +20,7 @@ const Button = ({
   ...props
 }: ButtonProps) => (
   <S.Wrapper
+    size={size}
     color={color}
     hasIcon={!!icon}
     minimal={minimal}

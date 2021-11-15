@@ -4,10 +4,16 @@ import { darken } from "polished";
 
 type WrapperProps = { hasIcon: boolean } & Pick<
   ButtonProps,
-  "color" | "minimal" | "iconSize"
+  "size" | "color" | "minimal" | "iconSize"
 >;
 
 const WrapperModifiers = {
+  small: (theme: DefaultTheme) => css`
+    min-width: 16rem;
+  `,
+  medium: (theme: DefaultTheme) => css`
+    min-width: 22rem;
+  `,
   withIcon: (theme: DefaultTheme, iconSize: number) => css`
     img {
       width: ${iconSize}px;
@@ -23,7 +29,7 @@ const WrapperModifiers = {
 };
 
 export const Wrapper = styled.button<WrapperProps>`
-  ${({ theme, color, hasIcon, minimal, iconSize }) => css`
+  ${({ theme, size, color, hasIcon, minimal, iconSize }) => css`
     height: 4rem;
 
     background-color: ${theme.colors[color!]};
@@ -48,6 +54,7 @@ export const Wrapper = styled.button<WrapperProps>`
       background-color: ${darken(0.05, theme.colors[color!])};
     }
 
+    ${!!size && WrapperModifiers[size](theme)}
     ${!!hasIcon && WrapperModifiers.withIcon(theme, iconSize!)};
     ${!!minimal && WrapperModifiers.minimal()};
   `}
